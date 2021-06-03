@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="shortcut icon" href="assets/favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/stylehome.css">
+</head>
+<body>
+    
+    <header class="hero">
+        <div class="container">
+
+            <section class="hero__container">
+                <div class="hero__texts">
+                    <img class="hero__icon"src="assets/calculator2.svg" alt="">
+                    <h1 class="hero__title">
+                        Calculadora Índice de Masa Corporal (IMC)
+                    
+                    <h2 class="hero__subtitle">El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de la persona. Ingresa tu información y evalúa si tu peso es saludable. </h2>
+                </div>
+            </section>
+        </div>
+        <div class="hero__wave" style="overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fffdf6;"></path></svg></div>
+    </header>
+
+    <main class="main">
+
+
+        <section class="about container">
+            <div class="about__course">
+                <h2 class="title title--border">¿Qué es el IMC?</h2>
+
+                <p class="about__paragraph">El índice de masa corporal (IMC) es un método utilizado para estimar la cantidad de grasa corporal que tiene una persona, y determinar por tanto si el peso está dentro del rango normal, o por el contrario, se tiene sobrepeso o delgadez. Para ello, se pone en relación la estatura y el peso actual del individuo. Esta fórmula matemática fue ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet o Body Mass Index (BMI).</p>
+
+                <p class="about__paragraph">Actualmente, esta fórmula está cayendo en desuso porque se está viendo que el IMC no hace diferencia entre la grasa corporal y la muscular, lo que hace que no sea muy exacto. “Un deportista o un culturista van a tener siempre un sobrepeso si tenemos en cuenta su peso respecto a la altura, pero no tienen los problemas de salud que tiene una persona obesa.</p>
+
+                <a href="https://cuidateplus.marca.com/alimentacion/diccionario/indice-masa-corporal-imc.html" target="_blank" class="cta">Quiero conocer más</a>
+            </div>
+
+            <figure class="about__picture">
+                <img src="assets/imc.png" class="about__img">
+            </figure>
+        </section>
+
+        <section class="calculator__imc">
+            <div class="container">
+                <div class="calculator__textos">
+                    <h2 class="calculator__title">CALCULAR IMC</h2>
+                    <p class="calculator__copy">Para un cálculo correcto necesitamos algo de información básica sobre ti</p>
+                </div>
+    
+    
+                <div class="calculator__container">          
+                    <div class="cardss__item">
+                        <p class="parrafotop">¿Cuánto pesas?</p>
+                        <figure class="calculator__img">
+                            <img src="assets/peso.svg" class="calculator__picturee">
+                        </figure>
+                        
+                        <div>
+                            <input type="number" id="peso" placeholder="50" min="20" max="300">
+                            <p class="paños">kg</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="cardss__item">
+                        <p class="parrafotop">¿Cuántos años tienes?</p>
+                        <figure class="calculator__img">
+                            <img src="assets/edad.svg" class="calculator__picturee">
+                        </figure>
+                        
+                        <div>
+                            <input type="number" id="edad" placeholder="18" min="1" max="105" maxlength="3">
+                            <p class="paños">años</p>
+                        </div>
+    
+    
+                    </div>
+    
+                    <div class="cardss__item">
+                        <p class="parrafotop">¿Cuánto mides?</p>
+                        <figure class="calculator__img">
+                            <img src="assets/estatura.svg" class="calculator__picturee">
+                        </figure>
+                        <div>
+                            <input type="number" id="estatura" placeholder="100" min="50" max="250">
+                            <p class="paños">centímetros</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="cardss__item">
+                        <p class="parrafotop">¿Cuál es tu género?</p>
+                        <figure class="calculator__img">
+                            <img src="https://assets.yazio.com/frontend/images/icons.svg#icon-male" class="calculator__picturee">     
+                            <img src="https://assets.yazio.com/frontend/images/icons.svg#icon-female" class="calculator__picturee">
+                        </figure>
+                        <figure>
+                        </figure>
+    
+                        <form action="" class="formulario">
+                            <div class="radio">
+    
+                                <input type="radio" name="sexo" id="hombre">
+                                <label class="labell" for="hombre">Masculino</label>
+    
+                                <input type="radio" name="sexo" id="mujer">
+                                <label class="labell" for="mujer">Femenino</label>
+        
+    
+                            </div>
+                        </form>
+    
+                    </div>
+    
+                       
+    
+                </div>
+    
+                <div class="container_boton">
+                    
+                    <a href="#result" class="butoncito" id="btnCalcular">
+                    Calcula tu IMC</a>
+                </div>
+    
+    
+                
+    
+            </div>
+    
+            <div id="result" class="resultados">
+    
+                <div class="imc_container container">
+                    <figure class="res_img">
+                        <img src="assets/graficoimc.jpg" alt="" class="imc_img">
+                    </figure>
+                    
+        
+                    <div class="imc_text">
+                        <h2 class="titulo_res">
+                            Tu resultado personal
+                        </h2>
+                        <div class="text_res">
+    
+                            <div class="cont_txt">
+                                <p class="textos">Edad: <span id="imcedad"></span></p>
+                            </div>
+    
+                            <div class="cont_txt">
+                                <p class="textos">Estatura: <span id="imcest"></span></p>
+                            </div>
+    
+                            <div class="cont_txt">
+                                <p class="textos">Peso: <span id="imcpeso"></span></p>
+                            </div>
+    
+                            <div class="cont_txt">
+                                <p class="textos">Tu IMC personal: <span id="imcperso"></span></p>
+                            </div>
+    
+                            <div class="cont_txt" id="fontcolor">
+                                <p class="textos" id="fonttext">Estado de peso: <span id="imcestado"></span></p>
+                            </div>
+    
+                            <div class="cont_txt">
+                                <p class="textos">Peso ideal: <span id="imcideal"></span></p>
+                            </div>
+                            
+                     
+                        </div>
+
+         
+                    </div>
+
+                    
+                </div>
+
+                <div id="fontcolordiag" class="imc_diag">
+                    <p class="text_diag" id="fonttextdiag">Diagnóstico: <span id="imcdiagnos"></span></p>
+                </div>
+    
+    
+            </div>
+    
+    
+        </section>
+
+        
+
+        <section class="card">
+            <div class="container">
+
+                <h2 class="title">Conoce los puntos más importantes</h2>
+                <p class="card__copy">Estos son los puntos más importantes que debes conocer sobre el IMC</p>
+
+                <div class="card__container">
+
+                    <div class="card__item">
+                        <figure class="card__img">
+                            <img src="assets/importancia.svg" class="card__picture">
+                        </figure>
+                        <h3 class="card__title">Importancia del IMC</h3>
+                        <p class="card__paragraph">Conocer tu IMC es importante, descubre más sobre ello...</p>
+                        <a href="http://tuendocrinologo.com/site/nutricion/calculadora.html" target="_blank" class="cta">Conocer más</a>
+                    </div>
+
+                    <div class="card__item">
+                        <figure class="card__img">
+                            <img src="assets/torta.svg" class="card__picture">
+                        </figure>
+                        <h3 class="card__title">Sobrepeso y obesidad</h3>
+                        <p class="card__paragraph">Conocimiento sobre el sobrepeso y obesidad es importante para el ciudado de uno mismo, conoce en que se diferencian...</p>
+                        <a href="https://www.who.int/dietphysicalactivity/childhood_what/es/" target="_blank"  class="cta">Conocer más</a>
+                    </div>
+
+                    <div class="card__item">
+                        <figure class="card__img">
+                            <img src="assets/saludable.svg" class="card__picture">
+                        </figure>
+                        <h3 class="card__title">Alimentación saludable</h3>
+                        <p class="card__paragraph">Tener una buena alimetación es importante para el bienestar de cada uno. Entérate que alimentos debemos consumir...</p>
+                        <a href="http://www.aeal.es/alimentacion-y-nutricion/3-alimentacion-saludable/" target="_blank" class="cta">Conocer más</a>
+                    </div>
+                    
+                    <div class="card__item">
+                        <figure class="card__img">
+                            <img src="assets/interpretacion.svg" class="card__picture">
+                        </figure>
+                        <h3 class="card__title">Interpretación del IMC</h3>
+                        <p class="card__paragraph">¿Desea conocer la interpreación del IMC tanto para niños, adolescentes y adultos?...</p>
+                        <a href="https://www.cdc.gov/healthyweight/spanish/assessing/bmi/index.html#:~:text=El%20%C3%ADndice%20de%20masa%20corporal,llevar%20a%20problemas%20de%20salud." target="_blank" class="cta">Conocer más</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="course container">
+
+            <figure class="course__picture">
+                <img src="assets/deporte.jpg" class="course__img">
+            </figure>
+
+            <div class="course__about">
+                <h2 class="title">Ejercicios recomendables para realizarlos en casa</h2>
+                <p class="about__paragraph">Cuando pensamos en hacer ejercicio nuestra primera idea es apuntarnos a un gimnasio. No cabe duda de que es el lugar adecuado para entrenarse o, al menos, en el que tendremos más facilidades. Descubre los ejercicios que puedes realizar estando en casa.</p>
+                <a href="https://www.elconfidencial.com/alma-corazon-vida/2013-05-08/ocho-ejercicios-que-te-haran-adelgazar-y-que-puedes-realizar-en-cualquier-parte_198159/" target="_blank" class="cta">Quiero descubrir</a>
+            </div>
+        </section>
+
+        <section class="course container">
+
+            <figure class="course__picture course__picture--right">
+                <img src="assets/Alimentos.jpg" class="course__img">
+            </figure>
+
+            <div class="course__about course__about--left">
+                <h2 class="title">Alimentación saludable para un peso saludable</h2>
+                <p class="about__paragraph">Un plan de alimentación que ayuda a controlar su peso incluye una variedad de alimentos saludables. Las verdueras y frutas están llenos de fibras y minerales que ayudan a tener un buen rendimiento. Descubre que alimentos te recomienda el CDC.</p>
+                <a href="https://www.cdc.gov/healthyweight/spanish/healthyeating/index.html" target="_blank" class="cta">Quiero descubrir</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+
+            <div class="footer__contact">
+                <div class="footer__texts">
+                    <h2 class="title">¿Tienes algunda duda?</h2>
+                    <p class="footer__copy">Si necesitas ayuda, puedes contactarme en cualquiera de mis redes sociales</p>
+
+                    <div class="footer__social">
+                        <a href="#" class="footer__link">
+                           <img src="assets/bxl-facebook.svg" class="footer__icon">
+                        </a>
+                        <a href="#" class="footer__link">
+                           <img src="assets/bxl-twitter.svg" class="footer__icon">
+                        </a>
+                        <a href="#" class="footer__link">
+                           <img src="assets/bxl-youtube.svg" class="footer__icon">
+                        </a>
+                        <a href="#" class="footer__link">
+                           <img src="assets/bxl-instagram.svg" class="footer__icon">
+                        </a>
+                    </div>
+                </div>
+
+                <figure class="footer__picture">
+                    <img src="assets/sentmessages.svg" class="footer__img">
+                </figure>
+            </div>
+
+            <p class="footer__copyright">
+                Sitio web creado por &copy; Angelo Jesus Inga Prado :
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
